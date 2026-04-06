@@ -26,7 +26,7 @@ const GoverningBodySection = () => {
             <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)] items-start">
               <div className="overflow-hidden rounded-3xl bg-slate-100 shadow-inner shadow-slate-200/70">
                 <img
-                  src="/governing-body/chairman.jpg"
+                  src="/governing-body/Sayeed Mahbub Khan.jpg"
                   alt="Sayeed Mahbub Khan, Chairman"
                   className="h-72 w-full object-cover"
                   loading="lazy"

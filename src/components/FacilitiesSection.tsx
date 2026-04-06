@@ -47,7 +47,7 @@ const FacilitiesSection = () => {
         >
           Our Facilities
         </motion.h2>
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {facilities.map((facility, index) => {
             const IconComponent = facility.icon;
             const isExpanded = expandedCard === index;
@@ -72,8 +72,8 @@ const FacilitiesSection = () => {
                   </p>
                 </div>
 
-                {/* Learn More Button - moved to left */}
-                <div className="flex justify-start">
+                {/* Learn More Button - moved to right */}
+                <div className="flex justify-end">
                   <motion.button
                     onClick={() => setExpandedCard(isExpanded ? null : index)}
                     className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors text-sm group"

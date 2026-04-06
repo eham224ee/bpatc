@@ -8,7 +8,7 @@ const ContactSection = () => {
           className="relative section-surface overflow-hidden p-8"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: [0.4, 0.0, 0.2, 1] }}
         >
           <div className="absolute -right-20 top-6 h-52 w-52 rounded-full bg-sky-600/10 blur-3xl" />
           <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">

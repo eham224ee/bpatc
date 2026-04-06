@@ -59,6 +59,7 @@ const FacilitiesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-blue-600 section-panel flex flex-col"
+                layout
               >
                 <div className="flex flex-col items-center text-center grow">
                   <div className="bg-blue-100 p-4 rounded-full mb-4">
@@ -67,9 +68,34 @@ const FacilitiesSection = () => {
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">{facility.title}</h3>
                   
                   {/* Show short or full description based on expanded state */}
-                  <p className="text-gray-600 leading-relaxed text-sm mb-4">
-                    {isExpanded ? facility.description : facility.shortDescription}
-                  </p>
+                  <motion.div
+                    layout
+                    initial={false}
+                    animate={{ 
+                      height: isExpanded ? "auto" : "auto",
+                      opacity: 1
+                    }}
+                    transition={{ 
+                      duration: 0.4, 
+                      ease: [0.4, 0.0, 0.2, 1]
+                    }}
+                    className="w-full overflow-hidden"
+                  >
+                    <motion.p 
+                      className="text-gray-600 leading-relaxed text-sm mb-4"
+                      initial={false}
+                      animate={{ 
+                        opacity: 1,
+                        y: 0
+                      }}
+                      transition={{ 
+                        duration: 0.3,
+                        delay: isExpanded ? 0.1 : 0
+                      }}
+                    >
+                      {isExpanded ? facility.description : facility.shortDescription}
+                    </motion.p>
+                  </motion.div>
                 </div>
 
                 {/* Learn More Button - moved to right */}
@@ -77,11 +103,14 @@ const FacilitiesSection = () => {
                   <motion.button
                     onClick={() => setExpandedCard(isExpanded ? null : index)}
                     className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors text-sm group"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
                   >
                     <span>{isExpanded ? "Show Less" : "Learn More"}</span>
                     <motion.div
                       animate={{ x: isExpanded ? 0 : 3, rotate: isExpanded ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </motion.div>

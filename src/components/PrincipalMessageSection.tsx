@@ -19,7 +19,7 @@ const PrincipalMessageSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: [0.4, 0.0, 0.2, 1] }}
           className="rounded-4xl border border-slate-200 bg-slate-50 shadow-[0_30px_80px_rgba(15,23,42,0.08)] overflow-hidden"
         >
           <div className="grid gap-6 lg:grid-cols-[360px_minmax(0,1fr)] items-start px-6 py-8 lg:px-10 lg:py-10">
@@ -58,7 +58,7 @@ const PrincipalMessageSection = () => {
                 <motion.div
                   initial={false}
                   animate={{ height: isExpanded ? "auto" : 0, opacity: isExpanded ? 1 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.4, ease: [0.4, 0.0, 0.2, 1] }}
                   className="overflow-hidden"
                 >
                   <div className="space-y-4 pt-2">
@@ -83,7 +83,7 @@ const PrincipalMessageSection = () => {
                   <span>{isExpanded ? "See Less" : "Read More"}</span>
                   <motion.div
                     animate={{ rotate: isExpanded ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
                     <ChevronDown className="w-4 h-4" />
                   </motion.div>

@@ -6,7 +6,7 @@ const AboutSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <section className="relative py-16 px-6 bg-linear-to-br from-slate-50 via-white to-blue-100/30 text-gray-800">
-      <div className="max-w-4xl mx-auto section-panel rounded-4xl px-6 py-10 sm:px-8 sm:py-12">
+      <div className="max-w-4xl mx-auto section-panel rounded-2xl px-6 py-10 sm:px-8 sm:py-12 border border-slate-200/70 shadow-md">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

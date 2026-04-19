@@ -58,8 +58,7 @@ const FacilitiesSection = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border-t-4 border-blue-600 section-panel flex flex-col"
-                layout
+                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 border border-slate-200 section-panel flex flex-col"
               >
                 <div className="flex flex-col items-center text-center grow">
                   <div className="bg-blue-100 p-4 rounded-full mb-4">
@@ -69,15 +68,14 @@ const FacilitiesSection = () => {
                   
                   {/* Show short or full description based on expanded state */}
                   <motion.div
-                    layout
                     initial={false}
                     animate={{ 
                       height: isExpanded ? "auto" : "auto",
                       opacity: 1
                     }}
                     transition={{ 
-                      duration: 0.4, 
-                      ease: [0.4, 0.0, 0.2, 1]
+                      duration: 0.3, 
+                      ease: "easeInOut"
                     }}
                     className="w-full overflow-hidden"
                   >
@@ -89,8 +87,8 @@ const FacilitiesSection = () => {
                         y: 0
                       }}
                       transition={{ 
-                        duration: 0.3,
-                        delay: isExpanded ? 0.1 : 0
+                        duration: 0.2,
+                        delay: isExpanded ? 0.05 : 0
                       }}
                     >
                       {isExpanded ? facility.description : facility.shortDescription}

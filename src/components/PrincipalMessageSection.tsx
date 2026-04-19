@@ -15,15 +15,15 @@ const PrincipalMessageSection = () => {
 
   return (
     <section className="py-16 px-6 bg-linear-to-br from-slate-50 via-white to-blue-100/30 text-slate-900">
-      <div className="max-w-6xl mx-auto section-panel rounded-4xl px-6 py-8 sm:px-8 sm:py-10">
+      <div className="max-w-6xl mx-auto section-panel rounded-2xl px-6 py-8 sm:px-8 sm:py-10 border border-slate-200/70 shadow-md">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.4, 0.0, 0.2, 1] }}
-          className="rounded-4xl border border-slate-200 bg-slate-50 shadow-[0_30px_80px_rgba(15,23,42,0.08)] overflow-hidden"
+          className="rounded-2xl border border-slate-200 bg-white shadow-md overflow-hidden"
         >
           <div className="grid gap-6 lg:grid-cols-[360px_minmax(0,1fr)] items-start px-6 py-8 lg:px-10 lg:py-10">
-            <div className="relative rounded-3xl overflow-hidden bg-slate-100 shadow-inner shadow-slate-200/70">
+            <div className="relative rounded-xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200/50">
               <img
                 src="/principle/principle.jpg"
                 alt="Principal Dr. Md. Roushon Jamal"

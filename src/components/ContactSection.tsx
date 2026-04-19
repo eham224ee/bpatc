@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ContactSection = () => {
   return (
-    <section className="py-12 px-6 bg-linear-to-br from-slate-100/70 via-white to-blue-100/40 text-slate-900">
+    <section className="py-12 px-6 bg-surface text-slate-900">
       <div className="mx-auto max-w-5xl">
         <motion.div
           className="relative section-surface overflow-hidden p-8"
@@ -10,12 +10,12 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.4, 0.0, 0.2, 1] }}
         >
-          <div className="absolute -right-20 top-6 h-52 w-52 rounded-full bg-sky-600/10 blur-3xl" />
+          <div className="absolute -right-20 top-6 h-52 w-52 rounded-full bg-brand-teal/10 blur-3xl" />
           <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
             <div className="space-y-6">
               <div>
                 <p className="section-heading-small">Contact Us</p>
-                <h2 className="section-heading-title">
+                <h2 className="section-heading-title text-brand-teal">
                   Send us a message and we'll respond as soon as possible.
                 </h2>
               </div>

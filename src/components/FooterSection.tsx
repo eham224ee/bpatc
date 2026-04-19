@@ -22,10 +22,10 @@ const FooterSection = () => {
           <div className="space-y-4">
             <p className="text-lg font-semibold text-white">Quick Links</p>
             <ul className="space-y-2 text-slate-300">
-              <li><a href="#" className="hover:text-white transition-colors">Academic Programs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Facilities</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Admission Info</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Governing Body</a></li>
+              <li><a href="#" className="hover:text-brand-teal transition-colors">Academic Programs</a></li>
+              <li><a href="#" className="hover:text-brand-teal transition-colors">Facilities</a></li>
+              <li><a href="#" className="hover:text-brand-teal transition-colors">Admission Info</a></li>
+              <li><a href="#" className="hover:text-brand-teal transition-colors">Governing Body</a></li>
             </ul>
           </div>
 

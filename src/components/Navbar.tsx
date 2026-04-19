@@ -216,7 +216,7 @@ const Navbar = () => {
                       <div key={index} className="border-b border-gray-200 pb-4">
                         <button
                           onClick={() => toggleMobileExpand(index)}
-                          className="flex items-center justify-between w-full text-left text-gray-800 hover:text-blue-600 transition-colors py-2"
+                          className="flex items-center justify-between w-full text-left text-gray-800 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors py-2 px-2 rounded-lg"
                         >
                           <span className="font-medium">{item.title}</span>
                           <motion.div
@@ -240,7 +240,7 @@ const Navbar = () => {
                                   <Link
                                     key={subIndex}
                                     to={`/${sublink.toLowerCase().replace(/\s+/g, "-")}`}
-                                    className="block py-1 text-gray-600 hover:text-blue-600 transition-colors"
+                                    className="block py-1 px-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors rounded-md"
                                     onClick={() => setIsOpen(false)}
                                   >
                                     {sublink}
@@ -255,7 +255,7 @@ const Navbar = () => {
                       <Link
                         key={index}
                         to={`/${item.title.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="block py-2 text-gray-800 hover:text-blue-600 transition-colors border-b border-gray-200 pb-4"
+                        className="block py-2 px-2 text-gray-800 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors border-b border-gray-200 pb-4 rounded-lg"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.title}
